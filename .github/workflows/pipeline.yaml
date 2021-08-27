@@ -1,0 +1,26 @@
+on: [push]
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - run: |
+        pwd
+        echo "$GITHUB_WORKSPACES or $github_workspaces"
+        ls
+    
+    - uses: actions/checkout@v2
+      name: git pull
+    - uses: ./
+      with:
+        myInput: 'hello from pipeline'
+      id: hello
+      name: hello custom action
+    - run: |
+        ls
+        pwd
+    - name: results
+      run: |
+        echo ${{steps.hello.outputs.memory}}\
+        echo "total of memory"
