@@ -6,10 +6,10 @@ inputs:
     description: 'Edd say hello'
     required: true
     default: 'Edd say hello from a container'
-  outputs:
-    myOutput:
-      description: 'total memory'
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
+outputs:
+  myOutput:
+    description: 'total memory'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
     
