@@ -16,7 +16,7 @@ jobs:
         pwd
         echo "$GITHUB_WORKSPACES or $github_workspaces"
         ls
-    - uses: epa1020/memory-action@release
+    - uses: epa1020/memory-action@v1.0.0
       with:
         myInput: 'hello from pipeline'
       id: hello
