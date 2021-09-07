@@ -16,7 +16,7 @@ jobs:
         pwd
         echo "$GITHUB_WORKSPACES or $github_workspaces"
         ls
-    - uses: ghcr.io/epa1020/memory-action:release
+    - uses: epa1020/memory-action@release
       with:
         myInput: 'hello from pipeline'
       id: hello
