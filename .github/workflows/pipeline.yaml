@@ -26,5 +26,5 @@ jobs:
         pwd
     - name: results
       run: |
-        echo ${{steps.hello.outputs.memory}}\
+        echo "${{steps.hello.outputs.memory}}"
         echo "total of memory"
